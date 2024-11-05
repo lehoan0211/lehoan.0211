@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cửa Hàng Đồ Đạt</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+
+<header>
+    <h1>CỬA HÀNG TRANG SỨC</h1>
+    <nav>
+        <a href="#">Trang Chủ</a>
+        <a href="#">Sản Phẩm</a>
+        <a href="#">Giỏ Hàng</a>
+        <a href="#">Liên Hệ</a>
+    </nav>
+</header>
+
+<div class="container">
+  <h2>Sản Phẩm Nổi Bật</h2>
+    <div class="product" id="product1">
+        <img src="NHAN.jpg" alt="Sản phẩm 1">
+        <h2>Nhẫn Kim Cương</h2>
+        <p>Mô tả ngắn gọn về sản phẩm 1.</p>
+        <p class="price">Giá: 300.000 VNĐ</p>
+        <button onclick="addToCart('Sản Phẩm 1', 300000)">Thêm Vào Giỏ</button>
+    </div>
+
+    <div class="product" id="product2">
+        <img src="BONGT.jpg" alt="Sản phẩm 2">
+        <h2>Bông Tai</h2>
+        <p>Mô tả ngắn gọn về sản phẩm 2.</p>
+        <p class="price">Giá: 450.000 VNĐ</p>
+        <button onclick="addToCart('Sản Phẩm 2', 450000)">Thêm Vào Giỏ</button>
+    </div>
+
+    <div class="product" id="product3">
+        <img src="DAYCHUYEN.jpg" alt="Sản phẩm 3">
+        <h2>Dây Chuyền Vàng</h2>
+        <p>Mô tả ngắn gọn về sản phẩm 3.</p>
+        <p class="price">Giá: 600.000 VNĐ</p>
+        <button onclick="addToCart('Sản Phẩm 3', 600000)">Thêm Vào Giỏ</button>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2024 Cửa Hàng Trang Sức. Bản quyền thuộc về chúng tôi.</p>
+</footer>
+
+<script>
+    let cart = [];
+
+    function addToCart(productName, price) {
+        cart.push({ name: productName, price: price });
+        alert(`${productName} đã được thêm vào giỏ hàng!`);
+        console.log(cart);
+    }
+</script>
+
+</body>
+</html>
